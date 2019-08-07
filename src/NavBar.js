@@ -35,7 +35,7 @@ return (
           <Link to="/">Reactcolorpicker</Link>
         </div>
         <div className ="slider-container">
-       <span class="level">Level: {level}</span>
+       <span className="level">Level: {level}</span>
         <div className="slider">
         <Slider  defaultValue={level} 
                 min ={100} 
@@ -67,8 +67,7 @@ return (
            key ='close'
            color = 'inherit'
            >
-               <CloseIcon /
-               >
+            <CloseIcon/>
            </IconButton>,
        ]}
        />
