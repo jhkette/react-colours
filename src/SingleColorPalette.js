@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ColorBox from "./ColorBox"
 import NavBar from "./NavBar"
 import PaletteFooter from './PaletteFooter'
+import {Link} from 'react-router-dom'
 
 // this loops to fin different shades of colour. ie differnt shades of blue. 
 
@@ -34,23 +35,28 @@ class SingleColorPalette extends Component {
  
   render() {
     const {format} = this.state;
-    const {paletteName, emoji} = this.props.palette;
+    const {paletteName, emoji, id} = this.props.palette;
     const colorBoxes = this._shades.map(color => (
       <ColorBox
-        key={color.id}
+        key={color.name}
         name={color.name}
         background={color[format]}
         showLink={false}
       />
     ));
     return (
-      <div className='Palette'>
+      <div className='SingleColorPalette Palette'>
         <NavBar 
         handleChange={this.changeFormat}
         showingAllColors ={false}
         />
         <h1>Single Color Palette</h1>
-        <div className='Palette-colors'>{colorBoxes}</div>
+        <div className='Palette-colors'>
+          {colorBoxes}
+          <div className="go-back ColorBox">
+            <Link to={`/palette/${id}`} className="back-button">GO Back</Link>
+          </div>
+        </div>
         <PaletteFooter paletteName={paletteName} emoji ={emoji} />
       </div>
     );
