@@ -129,3 +129,11 @@ opacity: 1;
     background-color: black;
 
 }
+
+.light-text{
+    color: white;
+}
+
+.ColorBox .dark-text{
+    color: black;
+}
