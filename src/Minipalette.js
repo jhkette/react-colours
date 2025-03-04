@@ -4,9 +4,10 @@ import { styled } from "@mui/system";
 const Root = styled("div")(({ theme }) => ({
   backgroundColor: "white",
   borderRadius: "5px",
-  padding: "1rem",
+  padding: ".85rem",
   position: "relative",
   overflow: "hidden",
+
   border: "1px solid black",
   "&:hover": {
     cursor: "pointer",
@@ -27,6 +28,7 @@ const Title = styled("h5")({
   margin: "0",
   color: "black",
   paddingTop: "0.5rem",
+  paddingBottom: "0.75rem",
   fontSize: "1rem",
   position: "relative",
 });
