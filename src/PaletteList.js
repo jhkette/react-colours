@@ -4,10 +4,11 @@ import MiniPalette from "./Minipalette";
 
 const Root = styled("div")({
   backgroundColor: "blue",
-  height: "100vh",
+  minHeight: "100vh",
   display: "flex",
   alignItems: "flex-start",
   justifyContent: "center",
+  padding: "20px 0"
 });
 
 const Container = styled("div")({
