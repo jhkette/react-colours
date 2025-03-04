@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 import Select from "@mui/material/Select"
 import MenuItem from '@mui/material/MenuItem';
-import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
+import Snackbar from '@mui/material/Snackbar';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import 'rc-slider/assets/index.css';
@@ -28,7 +28,7 @@ class  NavBar extends Component {
     this.setState({open: false})
 }
  render () {
-const {level, changeLevel, handleFormatChange, showingAllColors} = this.props;
+const {level, changeLevel, showingAllColors} = this.props;
 const {format} = this.state;
 return (
     <header className ="NavBar">
