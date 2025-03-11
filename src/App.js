@@ -7,7 +7,7 @@ import {seedColors} from "./seedColors";
 import { generatePalette } from "./colorHelpers";
 import PaletteList from "./PaletteList"
 import SingleColorPalette from './SingleColorPalette'
-
+import NotFound from "./NotFound";
 
 class App extends Component {
   findPalette(id) {
@@ -43,6 +43,7 @@ class App extends Component {
             />
           )}
         />
+          <Route path="*" render={<NotFound />} />
       </Switch>
 
       // <div>
